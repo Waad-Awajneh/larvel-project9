@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\DiscoverController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PpostController;
+use App\Http\Controllers\WorldController;
+use App\Http\Controllers\DiscoverController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/Getdescover', [DiscoverController::class, 'index']);
 Route::post('/addDescover', [DiscoverController::class, 'store']);
+
+Route::get('/GetWorld', [WorldController::class, 'index']);
+Route::post('/addWorld', [WorldController::class, 'store']);
+
+
+Route::get('/GetPpost', [PpostController::class, 'index']);
+Route::post('/addPpost', [PpostController::class, 'store']);
+
+// Route::get('/Getdescover', [DiscoverController::class, 'index']);
+// Route::post('/addDescover', [DiscoverController::class, 'store']);
