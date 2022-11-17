@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('catgeory')->nullable();
             $table->string('cover');
-            $table->string('desct')->nullable();
-            $table->string('descb')->nullable();
+            $table->longText('desct')->nullable();
+            $table->longText('descb')->nullable();
         });
     }
 

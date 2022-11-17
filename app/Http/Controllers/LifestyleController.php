@@ -14,7 +14,10 @@ class LifestyleController extends Controller
      */
     public function index()
     {
-        //
+
+        $lifestyle = Lifestyle::all();
+
+        return response()->json($lifestyle);
     }
 
     /**

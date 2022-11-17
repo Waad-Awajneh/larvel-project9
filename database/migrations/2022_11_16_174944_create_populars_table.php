@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text("catgeory")->nullable();
             $table->text("title")->nullable();
             $table->text("date")->nullable();
-            $table->text("comments")->nullable();
+
             $table->text("cover")->nullable();
             $table->text("desc")->nullable();
         });

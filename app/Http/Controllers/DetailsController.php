@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Popular;
+use App\Models\details;
 use Illuminate\Http\Request;
 
-class PopularController extends Controller
+class DetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,7 @@ class PopularController extends Controller
      */
     public function index()
     {
-
-
-        $Popular = Popular::all();
-
-        return response()->json($Popular);
+        //
     }
 
     /**
@@ -45,10 +41,10 @@ class PopularController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Popular  $popular
+     * @param  \App\Models\details  $details
      * @return \Illuminate\Http\Response
      */
-    public function show(Popular $popular)
+    public function show(details $details)
     {
         //
     }
@@ -56,10 +52,10 @@ class PopularController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Popular  $popular
+     * @param  \App\Models\details  $details
      * @return \Illuminate\Http\Response
      */
-    public function edit(Popular $popular)
+    public function edit(details $details)
     {
         //
     }
@@ -68,10 +64,10 @@ class PopularController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Popular  $popular
+     * @param  \App\Models\details  $details
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Popular $popular)
+    public function update(Request $request, details $details)
     {
         //
     }
@@ -79,10 +75,10 @@ class PopularController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Popular  $popular
+     * @param  \App\Models\details  $details
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Popular $popular)
+    public function destroy(details $details)
     {
         //
     }

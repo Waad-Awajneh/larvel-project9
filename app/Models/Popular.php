@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Popular extends Model
 {
+
+    protected $fillable = [
+        'desc',
+        'cover',
+        'date',
+        'title',
+        'catgeory',
+    ];
     use HasFactory;
 }

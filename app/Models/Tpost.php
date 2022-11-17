@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tpost extends Model
 {
+    protected $fillable = [
+        'cover',
+        'title',
+
+    ];
     use HasFactory;
 }

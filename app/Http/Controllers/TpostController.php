@@ -14,7 +14,10 @@ class TpostController extends Controller
      */
     public function index()
     {
-        //
+
+        $tpost = Tpost::all();
+
+        return response()->json($tpost);
     }
 
     /**

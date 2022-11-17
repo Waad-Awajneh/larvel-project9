@@ -14,7 +14,11 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+
+
+        $gallery = Gallery::all();
+
+        return response()->json($gallery);
     }
 
     /**

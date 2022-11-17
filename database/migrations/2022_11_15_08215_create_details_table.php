@@ -13,22 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('heroes', function (Blueprint $table) {
+        Schema::create('details', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->longText("para1")->nullable();
             $table->longText("para2")->nullable();
             $table->longText("para3")->nullable();
-            $table->string('time');
-            $table->string('authorName');
             $table->string('title');
-            $table->string('catgeory')->nullable();
-            $table->string('cover');
-            $table->string('authorImg')->nullable();
-            $table->string('descb')->nullable();
-            $table->foreignId('detail_id')->constrained()->onDelete('cascade');
+            $table->string('quote');
         });
     }
+
+
+
+
+
+
+
 
     /**
      * Reverse the migrations.
@@ -37,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('heroes');
+        Schema::dropIfExists('details');
     }
 };

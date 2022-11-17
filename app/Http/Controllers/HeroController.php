@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\HeroRescouse;
+use App\Models\details;
 use App\Models\Hero;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,13 @@ class HeroController extends Controller
      */
     public function index()
     {
-        //
+        // $hero = Hero::all();
+        // $det= details::find($hero->det)
+
+        return HeroRescouse::collection(Hero::all());
+        // return response()->json(
+        //     ["test" => "test", "hero" => ["1" => "1", "2" => "2", "3" => "3"]]
+        // );
     }
 
     /**
