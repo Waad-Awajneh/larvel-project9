@@ -2,8 +2,10 @@
 
 namespace App\Http\Resources;
 
-use App\Http\Resources\DetaileRescouse;
 use App\Models\details;
+use App\Models\catgeory;
+use App\Http\Resources\DetaileRescouse;
+use App\Http\Resources\CatgeoryRescouse;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class HeroRescouse extends JsonResource
@@ -22,12 +24,14 @@ class HeroRescouse extends JsonResource
             'para' => $this->para2,
             'para3' => $this->para3,
             'title' => $this->title,
-
+            'popular' => $this->popular,
+            'PaidContent' => $this->PaidContent,
             'cover' => $this->cover,
             'time' => $this->time,
             'authorName' => $this->authorName,
             'authorImg' => $this->authorImg,
-            'details' => new DetaileRescouse(details::find($this->detail_id))
+            'details' => new DetaileRescouse(details::find($this->detail_id)),
+            'catgeory' => new CatgeoryRescouse(catgeory::find($this->catgeory_id))
         ];
     }
 }

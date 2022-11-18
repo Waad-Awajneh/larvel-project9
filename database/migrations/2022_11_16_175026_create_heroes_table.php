@@ -22,7 +22,10 @@ return new class extends Migration
             $table->string('time');
             $table->string('authorName');
             $table->string('title');
-            $table->string('catgeory')->nullable();
+            $table->string('popular')->default("no");
+            $table->string('PaidContent')->default("no");
+            $table->foreignId('catgeory_id')->constrained()->onDelete('cascade');
+
             $table->string('cover');
             $table->string('authorImg')->nullable();
             $table->string('descb')->nullable();

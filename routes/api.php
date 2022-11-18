@@ -2,14 +2,15 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PpostController;
-use App\Http\Controllers\WorldController;
-use App\Http\Controllers\PopularController;
-use App\Http\Controllers\DiscoverController;
-use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HeroController;
-use App\Http\Controllers\LifestyleController;
+use App\Http\Controllers\PpostController;
 use App\Http\Controllers\TpostController;
+use App\Http\Controllers\WorldController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\PopularController;
+use App\Http\Controllers\CatgeoryController;
+use App\Http\Controllers\DiscoverController;
+use App\Http\Controllers\LifestyleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,6 @@ Route::post('/addLifestyle', [LifestyleController::class, 'store']);
 
 Route::get('/GetHero', [HeroController::class, 'index']);
 Route::post('/addHero', [HeroController::class, 'store']);
+
+Route::get('/Getcatgeory', [CatgeoryController::class, 'index']);
+Route::post('/addcatgeory', [CatgeoryController::class, 'store']);
