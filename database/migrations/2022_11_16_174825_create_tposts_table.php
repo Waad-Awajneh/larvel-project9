@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('tposts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text("title")->nullable();
-            $table->text("cover")->nullable();
+            $table->text("email")->nullable();
         });
     }
 
